@@ -1,0 +1,17 @@
+<h1>Weather Update</h1>
+<div>Location: {{location.city}}, {{location.region}}</div>
+<div>Date: {{lastBuildDate}}</div>
+<div>Conditions: {{item.condition.text}}</div>
+<div>Current Temp: {{item.condition.temp}}</div>
+<div>Sunrise: {{astronomy.sunrise}}</div>
+<div>Sunset: {{astronomy.sunset}}</div>
+{{#ifChecked}}
+<div>{{#list item.forecast}} {{day}} {{date}}: 
+hi| {{Fahrenheit high}}, low|{{Fahrenheit low}} 
+{{/list}}</div>
+{{else}}
+<div>{{#list item.forecast}} {{day}} {{date}}: 
+hi| {{celsius high}}, low|{{celsius low}} 
+{{/list}}</div>
+{{/ifChecked}}
+    

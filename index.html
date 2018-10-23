@@ -1,0 +1,44 @@
+<!doctype html>
+<html class="no-js" lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>ES5 Weather App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <!-- Add your site or application content here -->
+  <form class="frm weather">
+    <label for="location">Location</label>
+    <input type="text" id="location" name="location">
+    <input type="checkbox" id="checkbox">Fahrenheit
+    <button type="submit">Get Weather</button>
+  </form>
+
+  
+  <section class="weather-display"></section>
+  
+  
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+
+  <script src="js/vendor/handlebars.runtime-v4.0.12.js"></script>
+  <script src="js/dist/weather-display-template.js"></script>
+  <!-- <script src="js/src/templates/weather-display-template.js"></script> -->
+
+  <script src="js/plugins.js"></script>
+  <script src="js/dist/main.js"></script>
+  <!-- <script src="js/src/main.js"></script>  -->
+
+</body>
+
+</html>
