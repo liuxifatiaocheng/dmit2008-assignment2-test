@@ -1,3 +1,14 @@
+Handlebars.registerHelper('Temperature', (temperature) => {
+    if(document.querySelector('#fah').checked) {
+        let valNum = parseFloat(temperature);
+        let fahNum = (valNum*1.8)+32;
+        return fahNum + "F"  ;
+    } else {
+        let celNum = temperature;
+        return celNum + "C" ;
+    }
+});
+
 Handlebars.registerHelper('list', (context, options) => {
     var ret = "<ul>";
 
@@ -8,23 +19,25 @@ Handlebars.registerHelper('list', (context, options) => {
     return ret + "</ul>";
 });
 
-Handlebars.registerHelper('Fahrenheit', (temperature) => {
-    let valNum = parseFloat(temperature);
-    let fahNum = (valNum*1.8)+32;
-    return fahNum + "F"  ;
-});
 
-Handlebars.registerHelper('celsius', (temperature) => {
-    let celNum = temperature;
-    return celNum + "C" ;
-});
 
-Handlebars.registerHelper('ifChecked', function(isChecked, options) {
-    if(isChecked) {
-        return options.fn(this);
-    }
-    return options.inverse(this);
-  });
+// Handlebars.registerHelper('Fahrenheit', (temperature) => {
+//     let valNum = parseFloat(temperature);
+//     let fahNum = (valNum*1.8)+32;
+//     return fahNum + "F"  ;
+// });
+
+// Handlebars.registerHelper('celsius', (temperature) => {
+//     let celNum = temperature;
+//     return celNum + "C" ;
+// });
+
+// Handlebars.registerHelper('ifChecked', function(isChecked, options) {
+//     if(isChecked) {
+//         return options.fn(this);
+//     }
+//     return options.inverse(this);
+//   });
 
 
 const displayWeather = (data, el, showForecast) => {
@@ -44,7 +57,7 @@ document.querySelector('.frm.weather').addEventListener('submit', (e) => {
     // if (document.getElementById("checkbox").checked) {
     //     let checkbox = {isSelected: "ture"};
     // };
-    let isChecked = document.getElementById("checkbox").checked;
+    // let isChecked = document.getElementById("checkbox").checked;
 
  
 

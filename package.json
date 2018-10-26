@@ -10,6 +10,7 @@
     "compile": "npx babel js/src --out-dir js/dist",
     "watch": "npx babel js/src --watch --out-dir js/dist",
     "handlebars": "npx handlebars js/src/templates/weather-display-template.handlebars -f js/dist/weather-display-template.js",
+    "less": "npx lessc css/src/less/main.less css/dist/main.css",
     "build": "npm run-script compile && npm run-script handlebars"
   },
   "keywords": [],
@@ -20,7 +21,8 @@
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "babel-plugin-iife-wrap": "^1.1.0",
-    "handlebars": "^4.0.12"
+    "handlebars": "^4.0.12",
+    "less": "^3.8.1"
   },
   "babel": {
     "presets": [
@@ -29,6 +31,5 @@
     "plugins": [
       "iife-wrap"
     ]
-  },
-  "dependencies": {}
+  }
 }

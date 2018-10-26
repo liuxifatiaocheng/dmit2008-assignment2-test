@@ -12,21 +12,39 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dist/normalize.css">
+  <!-- <link rel="stylesheet" href="css/dist/main.css"> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,900" rel="stylesheet">
+
+  <link rel="stylesheet/less" type="text/css" href="css/src/less/main.less" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js" ></script>
 </head>
 
 <body>
   <!-- Add your site or application content here -->
-  <form class="frm weather">
-    <label for="location">Location</label>
-    <input type="text" id="location" name="location">
-    <input type="checkbox" id="checkbox">Fahrenheit
-    <button type="submit">Get Weather</button>
+  <h1>Weather App</h1>
+  <form class="frm weather weather-form-container">
+    <div>
+      <label for="location">Location: </label>
+      <input type="text" id="location" name="location">
+    </div>
+    <div>
+      <input type="radio" id="fah" name="tep" value="fah"/>
+      <label for="fah">Fahrenheit</label>
+    </div>
+    <div>
+      <input type="radio" id="cel" name="tep" value="cel"/>
+      <label for="cel">Celsius</label>
+    </div>
+    <div>
+      <button type="submit">Get Weather</button>
+    </div>
   </form>
 
+
   
-  <section class="weather-display"></section>
+  <div class="weather-display"></div>
   
   
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>
